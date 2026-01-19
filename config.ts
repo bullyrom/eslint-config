@@ -70,7 +70,7 @@ const ignoreConfig = globalIgnores([
   ".nuxt/**/*",
   // "libs/**/*",
   "static/sw.js",
-  "src/types/backend/backendApi.ts",
+  "src/types/backend/**/*",
   ".yarn",
 ])
 
