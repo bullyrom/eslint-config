@@ -1,27 +1,52 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["ES2022"],
+    "types": ["node"],
+
+    // Target and module settings
+    "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "noImplicitAny": true,
-    "outDir": "./dist",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    // Module resolution
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+
+    // Paths
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@types/*": ["./types/*"],
-      "@utils/*": ["./utils/*"]
+      "@/*": ["src/*"]
     },
-    "preserveConstEnums": true,
-    "removeComments": true,
-    "skipLibCheck": true,
+
+    // Declaration generation
+    "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
+
+    // Interop and compatibility
+    "esModuleInterop": true,
+    // eslint-disable-next-line no-secrets/no-secrets
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    // eslint-disable-next-line no-secrets/no-secrets
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // JSX for Vue components
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+
+    // Strictness
     "strict": true,
-    "target": "ES2024"
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // eslint-disable-next-line no-secrets/no-secrets
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+
+    "skipLibCheck": true
   },
-  "exclude": ["**/*.spec.ts", "dist/**/*"],
-  "include": ["./**/*"]
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }

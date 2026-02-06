@@ -1,6 +1,6 @@
 import { defineConfig } from "eslint/config"
 
-import cheConfig from "./config"
+import { cheConfig } from "./src/index"
 
 export default defineConfig([
   ...cheConfig(),

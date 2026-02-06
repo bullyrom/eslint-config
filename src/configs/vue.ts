@@ -1,7 +1,7 @@
 import { defineConfig } from "eslint/config"
 import vuePlugin from "eslint-plugin-vue"
 
-export default function vueConfig() {
+export function vueConfig() {
   return defineConfig([
     ...vuePlugin.configs["flat/recommended"],
     {

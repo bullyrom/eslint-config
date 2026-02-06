@@ -1,6 +1,6 @@
 import type { Config } from "prettier"
 
-const config: Config = {
+export default {
   bracketSameLine: false,
   endOfLine: "lf",
   plugins: ["prettier-plugin-tailwindcss"],
@@ -8,6 +8,4 @@ const config: Config = {
   semi: false,
   singleAttributePerLine: false,
   tabWidth: 2,
-}
-
-export default config
+} as Config

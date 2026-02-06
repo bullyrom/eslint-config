@@ -1,7 +1,7 @@
 import { defineConfig } from "eslint/config"
 import securityPlugin from "eslint-plugin-security"
 
-export default function securityConfig() {
+export function securityConfig() {
   return defineConfig([
     securityPlugin.configs.recommended,
 

@@ -1,7 +1,7 @@
 import { defineConfig } from "eslint/config"
 import noSecretsPlugin from "eslint-plugin-no-secrets"
 
-export default function noSecrets() {
+export function noSecrets() {
   return defineConfig([
     {
       plugins: {

@@ -1,13 +1,13 @@
 import { defineConfig } from "eslint/config"
-import sonarjsPlugin from "eslint-plugin-sonarjs"
+import { configs } from "eslint-plugin-sonarjs"
 
 export function sonarjsConfig() {
   return defineConfig([
-    sonarjsPlugin.configs.recommended,
+    configs.recommended,
     {
       rules: {
-        "sonarjs/todo-tag": "off",
         "sonarjs/no-commented-code": "off",
+        "sonarjs/todo-tag": "off",
       },
     },
   ])

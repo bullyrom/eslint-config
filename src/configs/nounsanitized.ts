@@ -1,6 +1,6 @@
 import { defineConfig } from "eslint/config"
 import nounsanitizedPlugin from "eslint-plugin-no-unsanitized"
 
-export default function nounsanitizedConfig() {
+export function nounsanitizedConfig() {
   return defineConfig([nounsanitizedPlugin.configs.recommended])
 }

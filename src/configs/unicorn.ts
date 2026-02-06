@@ -1,15 +1,13 @@
 import { defineConfig } from "eslint/config"
 import unicornPlugin from "eslint-plugin-unicorn"
 
-export default function unicornConfig() {
+export function unicornConfig() {
   return defineConfig([
     unicornPlugin.configs.all,
     {
       rules: {
         // # Change level.
         "unicorn/consistent-function-scoping": "warn",
-        "unicorn/no-useless-undefined": "off",
-
         // All old files wrote wrong.
         "unicorn/filename-case": [
           "error",
@@ -22,6 +20,8 @@ export default function unicornConfig() {
             },
           },
         ],
+
+        "unicorn/no-useless-undefined": "off",
       },
     },
   ])

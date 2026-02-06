@@ -1,7 +1,7 @@
 import { defineConfig } from "eslint/config"
 import { configs as tsConfigs } from "typescript-eslint"
 
-export default function tsConfig() {
+export function tsConfig() {
   return defineConfig([
     ...tsConfigs.strict,
     ...tsConfigs.stylistic,

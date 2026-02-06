@@ -5,20 +5,20 @@ import vueParser from "vue-eslint-parser"
 
 import { importConfig } from "./configs/importConfig"
 import { jsConfig } from "./configs/jsConfig"
-import jsoncConfig from "./configs/jsonc"
-import jsxA11yConfig from "./configs/jsxA11y"
-import noSecrets from "./configs/noSecrets"
-import nounsanitizedConfig from "./configs/nounsanitized"
-import perfectionist from "./configs/perfectionist"
-import prettierConfig from "./configs/prettier"
-import promiseConfig from "./configs/promiseConfig"
-import reactConfig from "./configs/react"
-import regexpConfig from "./configs/regexp"
-import securityConfig from "./configs/security"
+import { jsoncConfig } from "./configs/jsonc"
+import { jsxA11yConfig } from "./configs/jsxA11y"
+import { noSecrets } from "./configs/noSecrets"
+import { nounsanitizedConfig } from "./configs/nounsanitized"
+import { perfectionistConfig } from "./configs/perfectionist"
+import { prettierConfig } from "./configs/prettier"
+import { promiseConfig } from "./configs/promiseConfig"
+import { reactConfig } from "./configs/react"
+import { regexpConfig } from "./configs/regexp"
+import { securityConfig } from "./configs/security"
 import { sonarjsConfig } from "./configs/sonarjs"
-import tsConfig from "./configs/tsConfig"
-import unicornConfig from "./configs/unicorn"
-import vueConfig from "./configs/vue"
+import { tsConfig } from "./configs/tsConfig"
+import { unicornConfig } from "./configs/unicorn"
+import { vueConfig } from "./configs/vue"
 
 const files = [
   "*.js",
@@ -74,7 +74,7 @@ const ignoreConfig = globalIgnores([
   ".yarn",
 ])
 
-export default function cheConfig(parameters?: { nuxt: boolean }) {
+export function cheConfig(parameters?: { nuxt: boolean }) {
   let config = [
     ignoreConfig,
     rules,
@@ -92,7 +92,7 @@ export default function cheConfig(parameters?: { nuxt: boolean }) {
     ...regexpConfig(),
     ...jsxA11yConfig(),
     ...noSecrets(),
-    ...perfectionist(),
+    ...perfectionistConfig(),
   ]
 
   if (parameters?.nuxt !== true) {
