@@ -1,6 +1,6 @@
 {
   "name": "@chapaev17/eslint-config",
-  "description": "Vue composables and JSX components library",
+  "description": "Chapaev17's ESLint config",
   "version": "0.1.0",
   "license": "MIT",
   "keywords": [
@@ -12,11 +12,15 @@
     "typescript",
     "vue"
   ],
+  "sideEffects": false,
   "scripts": {
     "build": "tsup",
     "lint": "eslint ."
   },
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
