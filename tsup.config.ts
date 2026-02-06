@@ -4,7 +4,9 @@ export default defineConfig({
   clean: true,
   dts: true,
   entry: ["src/index.ts"],
-  external: ["vue", "eslint"],
+  external: ["eslint"],
   format: ["esm", "cjs"],
   sourcemap: true,
+  splitting: false,
+  treeshake: true,
 })
