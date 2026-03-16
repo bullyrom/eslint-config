@@ -6,9 +6,11 @@ import vueParser from "vue-eslint-parser"
 import { importConfig } from "./configs/importConfig"
 import { jsConfig } from "./configs/jsConfig"
 import { jsoncConfig } from "./configs/jsonc"
+// import { jsoncParserConfig } from "./configs/jsoncParser"
 import { jsxA11yConfig } from "./configs/jsxA11y"
 import { noSecrets } from "./configs/noSecrets"
 import { nounsanitizedConfig } from "./configs/nounsanitized"
+import { packageJsonConfig } from "./configs/packageJson"
 import { perfectionistConfig } from "./configs/perfectionist"
 import { prettierConfig } from "./configs/prettier"
 import { promiseConfig } from "./configs/promiseConfig"
@@ -79,6 +81,7 @@ export function cheConfig(parameters?: { nuxt: boolean }) {
     ignoreConfig,
     rules,
     vueParserConfig,
+    // ...jsoncParserConfig(),
     ...importConfig({ nuxt: parameters?.nuxt }),
     ...jsConfig(),
     ...jsoncConfig(),
@@ -93,6 +96,7 @@ export function cheConfig(parameters?: { nuxt: boolean }) {
     ...jsxA11yConfig(),
     ...noSecrets(),
     ...perfectionistConfig(),
+    ...packageJsonConfig(),
   ]
 
   if (parameters?.nuxt !== true) {

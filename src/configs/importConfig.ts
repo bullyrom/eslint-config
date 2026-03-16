@@ -27,8 +27,8 @@ export function importConfig(parameters: { nuxt?: boolean }) {
       extends: valideExtends,
       rules: {
         "import/consistent-type-specifier-style": "warn",
-
         "import/default": "error",
+
         "import/dynamic-import-chunkname": "warn",
         // Errors
         "import/export": "error",
@@ -36,12 +36,12 @@ export function importConfig(parameters: { nuxt?: boolean }) {
         // # Off
         // Dont use file format in import.
         "import/extensions": "off",
-
         "import/first": "warn",
+
         "import/group-exports": "warn",
+        "import/named": "error",
         // "import/max-dependencies": "warn",
 
-        "import/named": "error",
         "import/namespace": "error",
         "import/newline-after-import": "warn",
         // "import/enforce-node-protocol-usage": "warn",
@@ -53,8 +53,8 @@ export function importConfig(parameters: { nuxt?: boolean }) {
         "import/no-default-export": "warn",
         // Other rules
         "import/no-deprecated": "warn",
-
         "import/no-duplicates": "warn",
+
         "import/no-dynamic-require": "warn",
         // Auto-fixable
         "import/no-empty-named-blocks": "warn",
@@ -71,7 +71,7 @@ export function importConfig(parameters: { nuxt?: boolean }) {
         "import/no-namespace": "warn",
         "import/no-nodejs-modules": "off",
         "import/no-relative-packages": "warn",
-        "import/no-relative-parent-imports": "warn",
+        "import/no-relative-parent-imports": "off",
         "import/no-restricted-paths": "warn",
         "import/no-self-import": "warn",
         "import/no-unassigned-import": "warn",

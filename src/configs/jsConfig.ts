@@ -34,6 +34,7 @@ export function jsConfig() {
             ignore: [-1, 0, 1, 2, 3],
             ignoreClassFieldInitialValues: true,
             ignoreDefaultValues: true,
+            ignoreNumericLiteralTypes: true,
           },
         ],
 
@@ -43,6 +44,13 @@ export function jsConfig() {
         "no-ternary": "off",
         "no-undef": "off",
         "no-undefined": "off",
+        "no-use-before-define": [
+          "error",
+          {
+            classes: false,
+            functions: false,
+          },
+        ],
         "no-warning-comments": "off",
         "one-var": "off",
         quotes: ["error", "double", { avoidEscape: true }],
