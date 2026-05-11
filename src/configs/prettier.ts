@@ -5,7 +5,13 @@ import prettierPluginRecommended from "eslint-plugin-prettier/recommended"
 export function prettierConfig() {
   return defineConfig([prettierConfigFlat, prettierPluginRecommended], {
     rules: {
-      "prettier/prettier": "warn",
+      "prettier/prettier": [
+        "error",
+        {},
+        {
+          usePrettierrc: true,
+        },
+      ],
     },
   })
 }

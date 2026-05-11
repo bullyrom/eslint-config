@@ -1,7 +1,7 @@
 import jsPlugin from "@eslint/js"
 import { defineConfig } from "eslint/config"
 
-const maxStatementsValue = 15
+// const maxStatementsValue = 15
 
 export function jsConfig() {
   return defineConfig([
@@ -20,14 +20,17 @@ export function jsConfig() {
         // Line end format
         "linebreak-style": ["error", "unix"],
         "max-lines-per-function": ["warn", { max: 170, skipComments: true }],
-        "max-statements": [
-          "warn",
-          maxStatementsValue,
-          { ignoreTopLevelFunctions: true },
-        ],
+        "max-params": "off",
+        "max-statements": "off",
+        // "max-statements": [
+        //   "warn",
+        //   maxStatementsValue,
+        //   { ignoreTopLevelFunctions: true },
+        // ],
         // Acces console debug, coze nuxt delete them in build.
         "no-console": ["warn", { allow: ["debug", "error", "warn"] }],
         "no-duplicate-imports": "off",
+
         "no-magic-numbers": [
           "error",
           {
@@ -37,13 +40,14 @@ export function jsConfig() {
             ignoreNumericLiteralTypes: true,
           },
         ],
-
         // Fix wrong work no-shadow in ts.
         "no-restricted-syntax": "off",
         "no-shadow": "off",
         "no-ternary": "off",
         "no-undef": "off",
         "no-undefined": "off",
+        // Use this rule from ts plugin
+        "no-unused-vars": "off",
         "no-use-before-define": [
           "error",
           {

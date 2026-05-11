@@ -7,6 +7,7 @@ export function sonarjsConfig() {
     {
       rules: {
         "sonarjs/no-commented-code": "off",
+        "sonarjs/no-empty-test-file": "off",
         "sonarjs/todo-tag": "off",
       },
     },
