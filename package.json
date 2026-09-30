@@ -28,7 +28,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepare": "yarn build"
   },
   "dependencies": {
     "@eslint/js": "^9.39.2",
