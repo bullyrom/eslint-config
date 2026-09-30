@@ -29,6 +29,7 @@
   "scripts": {
     "build": "tsup",
     "lint": "eslint .",
+    "prepack": "yarn build",
     "prepare": "yarn build"
   },
   "dependencies": {
