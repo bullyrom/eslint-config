@@ -1,7 +1,7 @@
 {
-  "name": "@chapaev17/eslint-config",
+  "name": "@bullyrom/eslint-config",
   "version": "0.1.0",
-  "description": "Chapaev17's ESLint config",
+  "description": "Bullyrom's ESLint config",
   "keywords": [
     "eslint",
     "eslint-config",
